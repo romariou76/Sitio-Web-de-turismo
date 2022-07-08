@@ -5,24 +5,99 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {%load static%}
-    <link rel="stylesheet" href="{%static 'WebPayments/css/materialize.css'%}">
-
+    <link rel="stylesheet" href="{%static 'WebPayments/css/materialize.min.css'%}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <body>
 
-<nav class="nav-wrapper purple ">
-<div class="container">
-    <div class="left-nav">
-        <p class="brand-logo">City Tours</p>
-    </div>
-     <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="">Viajes</a></li>
-        <li><a href="">Precios</a></li>
-        <li><a href="">Sobre nosotros</a></li>
-      </ul>
-</div>
+    <nav>
+        <div class="nav-wrapper purple">
+          <a href="#!" class="brand-logo">City Tours</a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+            <li>
+                <!-- Dropdown Trigger -->
+                <a class='dropdown-trigger' href='#' data-target='dropdown1'>Lugares</a>
+                <!-- Dropdown Structure -->
+                <ul id='dropdown1' class='dropdown-content'>
+                  <li><a href="#!">Machu Pichu</a></li>
+                  <li><a href="#!">Valle del Colca</a></li>
+                  <li><a href="#!">three</a></li>
+                  <li><a href="#!">four</a></li>
+                  <li><a href="#!">five</a></li>
+                </ul>
+            </li>
+            <li><a href="sass.html">Viajes</a></li>
+            <li><a href="#!">Precios</a></li>
+            <li><a class="waves-effect waves-light modal-trigger" href="#modal1">Sobre nosotros</a></li>
+          </ul>
+        </div>
+      </nav>
 
-</nav>
+        <!-- Modal Structure -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <h4>Demo of Simple Modal</h4>
+                <p>
+                <div class="red-text">
+                    Content of the modal goes here. <br>
+                    Type information here. <br>
+                </div>
+                C is a procedural programming language.
+                It was initially developed by Dennis 
+                Ritchie as a system programming language 
+                to write operating system. The main 
+                features of C language include low-level
+                access to memory, simple set of keywords,
+                and clean style, these features make C 
+                language suitable for system programming 
+                like operating system or compiler development.
+                </p>
+            </div>
+  
+            <div class="modal-footer">
+                <a href="#!" class="modal-action 
+                    modal-close waves-effect waves-green 
+                    btn green lighten-1">
+                    Close
+                </a>
+            </div>
+        </div>
 
+                <ul class="sidenav" id="mobile-demo">
+                  <li><a href="sass.html">Viajes</a></li>
+                  <li><a href="badges.html">Precios</a></li>
+                  <li><a href="#modal1">Sobre Nosotros</a></li>
+                  <li><a href="mobile.html">Lugares</a></li>
+                </ul>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.sidenav');
+        var instances = M.Sidenav.init(elems, options);
+        });
+     // Or with jQuery
+     $(document).ready(function(){
+      $('.sidenav').sidenav();
+        });
+
+//DROPSDOWN MENU        
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.dropdown-trigger');
+    var instances = M.Dropdown.init(elems, options);
+  });
+  // Or with jQuery
+  $('.dropdown-trigger').dropdown();
+
+
+//Modal js code
+$(document).ready(function () {
+            $('.modal').modal();
+        }
+        )
+    </script>
 
 <div class="contenido">
 {%block contenido%}
@@ -33,7 +108,7 @@
     <div class="container">
         <div class="row">
             <div class="col s12 m8 l6">
-                <h5 class="cyan-text">Creador: Romario Quispe Hancco</h5>   
+                <h5 class="cyan-text">Creado por: Romario Quispe Hancco</h5>   
             </div>
             <div class="col s12 m4 l6">
                 <h5 class="teal-text text-accent-4">Gracias por visitar mi página web.</h5>    
@@ -50,6 +125,8 @@
     </div>
 </footer>
 {%load static%}
+
+
 
 </body>
 </html>
