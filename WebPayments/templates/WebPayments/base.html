@@ -13,53 +13,49 @@
 <body>
 
     <nav>
-        <div class="nav-wrapper purple">
-          <a href="#!" class="brand-logo">City Tours</a>
-          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-          <ul class="right hide-on-med-and-down">
-            <li>
-                <!-- Dropdown Trigger -->
-                <a class='dropdown-trigger' href='#' data-target='dropdown1'>Lugares</a>
-                <!-- Dropdown Structure -->
-                <ul id='dropdown1' class='dropdown-content'>
-                  <li><a href="#!">Machu Pichu</a></li>
-                  <li><a href="#colca">Valle del Colca</a></li>
-                  <li><a href="#!">three</a></li>
-                  <li><a href="#!">four</a></li>
-                  <li><a href="#!">five</a></li>
+        <div class="nav-wrapper purple darken-4">
+            <div class="container">
+                <div class="bold-div">
+                    <p class="brand-logo">City Tours</p>
+                </div>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                  <li>
+                      <!-- Dropdown Trigger -->
+                      <a class='dropdown-trigger' href='#' data-target='dropdown1'>Descubre</a>
+                      <!-- Dropdown Structure -->
+                      <ul id='dropdown1' class='dropdown-content'>
+                        <li><a href="#!">Cusco</a></li>
+                        <li><a href="#colca">Arequipa</a></li>
+                        <li><a href="#!">Ica</a></li>
+                        <li><a href="#!">Madre de Dios</a></li>
+                        <li><a href="#!">Loreto</a></li>
+                      </ul>
+                  </li>
+                  <li><a href="#">Viajes</a></li>
+                  <li><a class="waves-effect waves-light modal-trigger" href="#modal1">Sobre nosotros</a></li>
                 </ul>
-            </li>
-            <li><a href="sass.html">Viajes</a></li>
-            <li><a class="waves-effect waves-light modal-trigger" href="#modal1">Sobre nosotros</a></li>
-          </ul>
+
+            </div>
         </div>
-      </nav>
+    </nav>
 
-      <ul class="sidenav" id="mobile-demo">
-        <li><a href="sass.html">Viajes</a></li>
-        <li><a href="#modal1">Sobre Nosotros</a></li>
-        <li><a href="mobile.html">Lugares</a></li>
-      </ul>
-
+                        <ul class="sidenav" id="mobile-demo">
+                          <li><a href="#!">Viajes</a></li>
+                          <li><a href="#modal1">Sobre Nosotros</a></li>
+                          <li><a href="#!">Lugares</a></li>
+                        </ul>
 
         <!-- Modal Structure -->
         <div id="modal1" class="modal">
             <div class="modal-content">
-                <h4>Demo of Simple Modal</h4>
+                <h4 class="bold-text">City Torus</h4>
                 <p>
-                <div class="red-text">
-                    Content of the modal goes here. <br>
-                    Type information here. <br>
-                </div>
-                C is a procedural programming language.
-                It was initially developed by Dennis 
-                Ritchie as a system programming language 
-                to write operating system. The main 
-                features of C language include low-level
-                access to memory, simple set of keywords,
-                and clean style, these features make C 
-                language suitable for system programming 
-                like operating system or compiler development.
+                
+                Somos una empresa dedicada a mostrar diversos lugares turisticos de nuestro pais Perú, asi como
+                informar, describir todas estras atracciones hacia los demas.
+                Estamos de lunes a domingo ofreciendo un excelente y comodo servicio.
+                Que espera, venga a conocer más del Perú!.
                 </p>
             </div>
             <div class="modal-footer">
@@ -102,18 +98,18 @@
 
 {%endblock%}
 </div>
-<footer class="page-footer purple">
+<footer class="page-footer purple darken-4">
     <div class="container">
         <div class="row">
             <div class="col s12 m8 l6">
                 <h5 class="white-text">Creado por: Romario Quispe Hancco</h5>   
             </div>
             <div class="col s12 m4 l6">
-                <h5 class="white-text text-accent-4">Gracias por visitar mi página web.</h5>    
+                <h5 class="white-text text-accent-4">Gracias por visitar City Tours</h5>    
             </div>
         </div>
     </div>
-    <div class="footer-copyright purple">
+    <div class="footer-copyright purple darken-4">
         <div class="container">
             <div class="brand-text left">
                 © 2021 Copyright Text
@@ -123,8 +119,5 @@
     </div>
 </footer>
 {%load static%}
-
-
-
 </body>
 </html>
