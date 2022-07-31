@@ -4,5 +4,5 @@ from .views import base, index
 from django.urls import path
 
 urlpatterns = [
-    path("index/", index, name="index")
+    path("", index, name="index")
 ]
